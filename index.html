@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e42f2f8b04.js" crossorigin="anonymous"></script>
     <!-- Tailwind and DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,15 +24,74 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                'primary-btn-bg': '#ABEF5F',
+                'primary-text': '#212121',
+                'sec-text': '#737373',
+                'third-text': '#494949',
               }
             }
           }
         }
       </script>
 </head>
-<body>
-    <header>
-        
+<body class="font-manrope">
+    <header class="bg-gradient-to-b from-stone-200 to-white">
+        <!-- nav section -->
+        <nav class="container pt-11 m-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <div class="flex items-center">
+                    <i class="fa-solid fa-arrow-right h-8 w-8 inline-flex justify-center items-center bg-primary-btn-bg rounded-full -rotate-45 mr-2"></i>
+                    <h2 class="text-4xl font-extrabold text-primary-text">Rinterio</h2>
+                </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="flex gap-9">
+                        <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Home</a></li>
+                        <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Services</a></li>
+                        <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Portfolio</a></li>
+                        <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Blogs</a></li>
+                        <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="hidden md:block">
+                        <i class="fa-solid fa-magnifying-glass h-12 w-12 inline-flex justify-center items-center bg-white rounded-full"></i>
+                        <i class="fa-solid fa-cart-shopping h-12 w-12 inline-flex justify-center items-center bg-white rounded-full ml-4"></i>
+                    </div>
+                    <button class="text-xl font-extrabold px-6 py-5 bg-primary-btn-bg rounded-[32px] hidden md:block ml-4 ">Book Consult <i class="fa-solid fa-arrow-right h-8 w-8 inline-flex justify-center items-center text-white bg-black rounded-full -rotate-45 ml-2"></i> </button>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <i class="fa-solid fa-bars text-2xl text-sec-text h-12 w-12 bg-white rounded-full inline-flex items-center justify-center"></i>
+                        </div>
+                        <ul
+                          tabindex="0"
+                          class="menu menu-sm dropdown-content hidden lg:block bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                            <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Home</a></li>
+                            <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Services</a></li>
+                            <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Portfolio</a></li>
+                            <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Blogs</a></li>
+                            <li><a class="text-sec-text font-medium hover:text-[#494949] transition duration-300 ease-in-out" href="#">Contact Us</a></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+        </nav>
+        <!-- banner section -->
+        <div class="hero container m-auto">
+            <div class="hero-content flex-col">
+              <img
+                src="./assets/banner.png"
+                class="mb-6" />
+              <div class="text-center">
+                <h1 class="text-3xl md:text-6xl font-extrabold md:leading-[70px] mb-6">A barn house of this design has a striking appearance</h1>
+                <p class="text-sm md:text-base font-medium text-third-text mb-8 leading-7 md:w-5/6 m-auto">
+                    This barn house design exudes a striking appearance, seamlessly blending the charm of rustic architecture with modern elegance. With its iconic silhouette and contemporary finishes, this design is perfect for those who appreciate the fusion of tradition and innovation.
+                </p>
+                <button class="text-xl font-extrabold px-24 md:px-8 py-5 bg-primary-btn-bg hover:bg-[#ABEF5F80] transition-colors duration-300 ease-in-out rounded-[32px] inline-flex gap-2">View Details <i class="fa-solid fa-arrow-right h-8 w-8 inline-flex justify-center items-center text-white bg-black rounded-full -rotate-45"></i> </button>
+              </div>
+            </div>
+          </div>
     </header>
     <main>
 
